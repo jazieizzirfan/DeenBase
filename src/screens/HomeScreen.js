@@ -7,12 +7,12 @@ import { Screen, LogoHeader, Card, Card2, Loader, useTheme, Btn, Muted, Toggle }
 import { COLORS } from '../data/constants';
 
 const QUICK_ITEMS = [
-  { key: 'Quran',  tab: 'Quran',  icon: 'book-outline',         label: 'Al-Quran',    sub: '114 Surahs · EN/BM' },
-  { key: 'Prayer', tab: 'Prayer', icon: 'time-outline',          label: 'Prayer Times', sub: 'Adzan · JAKIM' },
-  { key: 'Qibla',  nav: 'Qibla',  icon: 'compass-outline',       label: 'Qibla',       sub: 'Live compass' },
-  { key: 'Zikir',  tab: 'Zikir',  icon: 'hand-right-outline',    label: 'Zikir & Dua', sub: 'Morning · Evening' },
-  { key: 'Names',  nav: 'Names',  icon: 'sparkles-outline',      label: '99 Names',    sub: 'Asmaul Husna' },
-  { key: 'Quotes', nav: 'Quotes', icon: 'chatbubble-outline',    label: 'Quran Quotes', sub: 'Comfort · Trust · Mercy' },
+  { key: 'Quran', tab: 'Quran', icon: 'book-outline', label: 'Al-Quran', sub: '114 Surahs · EN/BM' },
+  { key: 'Prayer', tab: 'Prayer', icon: 'time-outline', label: 'Prayer Times', sub: 'Adzan · JAKIM' },
+  { key: 'Qibla', nav: 'Qibla', icon: 'compass-outline', label: 'Qibla', sub: 'Live compass' },
+  { key: 'Zikir', tab: 'Zikir', icon: 'hand-right-outline', label: 'Zikir & Dua', sub: 'Morning · Evening' },
+  { key: 'Names', nav: 'Names', icon: 'sparkles-outline', label: '99 Names', sub: 'Asmaul Husna' },
+  { key: 'Quotes', nav: 'Quotes', icon: 'chatbubble-outline', label: 'Quran Quotes', sub: 'Comfort · Trust · Mercy' },
 ];
 
 export default function HomeScreen({ navigation }) {
@@ -45,13 +45,13 @@ export default function HomeScreen({ navigation }) {
     if (!prayerData) {
       fetchPrayerByCity(pCity, pCountry, pMethod)
         .then(data => { setPrayerData(data); })
-        .catch(() => {});
+        .catch(() => { });
     }
     // Hijri date (cache 1 day)
     const lastFetch = useStore.getState().hijriDateFetched;
     if (!hijriDate || !lastFetch || Date.now() - lastFetch > 86400000) {
       import('../services/prayerService').then(({ fetchHijriDate }) => {
-        fetchHijriDate().then(h => { if (h) setHijriDate(h); }).catch(() => {});
+        fetchHijriDate().then(h => { if (h) setHijriDate(h); }).catch(() => { });
       });
     }
   }, []);
@@ -168,7 +168,7 @@ export default function HomeScreen({ navigation }) {
           {[
             { val: completed.length, label: 'Surahs Read' },
             { val: bookmarks.length, label: 'Bookmarks' },
-            { val: totalZikr,        label: 'Zikr Done' },
+            { val: totalZikr, label: 'Zikr Done' },
           ].map(s => (
             <View key={s.label} style={[styles.statBox, { backgroundColor: C.surf, borderColor: C.brd }]}>
               <Text style={{ color: C.acc, fontSize: 22, fontFamily: 'CormorantGaramond_700Bold' }}>{s.val}</Text>
@@ -236,9 +236,9 @@ const styles = StyleSheet.create({
   hijriBar: { borderRadius: 10, paddingVertical: 8, paddingHorizontal: 13, marginBottom: 12, flexDirection: 'row', alignItems: 'center', gap: 7 },
   statsRow: { flexDirection: 'row', gap: 7, marginBottom: 12 },
   statBox: { flex: 1, borderRadius: 11, padding: 11, alignItems: 'center', borderWidth: 1 },
-  grid: { flexDirection: 'row', flexWrap: 'wrap', gap: 8, marginBottom: 12 },
-  qcard: { width: '47.5%', borderRadius: 14, padding: 14, borderWidth: 1 },
+  grid: { width: "100%", flexDirection: 'row', flexWrap: 'wrap', gap: 8, marginBottom: 12 },
+  qcard: { width: "48%", borderRadius: 14, padding: 14, borderWidth: 1, alignItems: 'center' },
   qcardTitle: { fontSize: 12.5, fontFamily: 'Sora_600SemiBold', marginBottom: 2 },
   qcardSub: { fontSize: 10, fontFamily: 'Sora_400Regular', lineHeight: 15 },
-  trust: { borderRadius: 10, padding: 10, flexDirection: 'row', alignItems: 'flex-start' },
+  trust: { borderRadius: 10, padding: 10, flexDirection: 'row', alignItems: 'flex-start', justifyContent: 'center' },
 });
