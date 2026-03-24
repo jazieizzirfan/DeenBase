@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, ActivityIndicator, Platform, StyleSheet } from 'react-native';
+import { View, Text, ActivityIndicator } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { StatusBar } from 'expo-status-bar';
@@ -89,51 +89,21 @@ export default function App() {
 
   if (!appReady || (!fontsLoaded && !fontError)) {
     return (
-      <View style={styles.desktopWrapper}>
-        <View style={[styles.appContainer, { alignItems: 'center', justifyContent: 'center' }]}>
-          <ActivityIndicator size="large" color="#C4A44A" />
-          <Text style={{ color: '#C4A44A', marginTop: 16, fontFamily: 'System', fontSize: 18 }}>
-            DeenBase
-          </Text>
-        </View>
+      <View style={{ flex: 1, backgroundColor: '#080D0A', alignItems: 'center', justifyContent: 'center' }}>
+        <ActivityIndicator size="large" color="#C4A44A" />
+        <Text style={{ color: '#C4A44A', marginTop: 16, fontFamily: 'System', fontSize: 18 }}>
+          DeenBase
+        </Text>
       </View>
     );
   }
 
   return (
-    <View style={styles.desktopWrapper}>
-      <View style={styles.appContainer}>
-        <GestureHandlerRootView style={{ flex: 1 }}>
-          <SafeAreaProvider>
-            <StatusBar style={dark ? 'light' : 'dark'} />
-            <AppNavigator />
-          </SafeAreaProvider>
-        </GestureHandlerRootView>
-      </View>
-    </View>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <SafeAreaProvider>
+        <StatusBar style={dark ? 'light' : 'dark'} />
+        <AppNavigator />
+      </SafeAreaProvider>
+    </GestureHandlerRootView>
   );
 }
-
-// ─── STYLES TO CONSTRAIN WIDTH ON WEB ───
-const styles = StyleSheet.create({
-  desktopWrapper: {
-    flex: 1,
-    backgroundColor: '#050806', // Very dark background for the empty space on desktop monitors
-  },
-  appContainer: {
-    flex: 1,
-    width: '100%',
-    // If running on a web browser, limit the width to a mobile size (480px). Otherwise, use 100%.
-    maxWidth: Platform.OS === 'web' ? 480 : '100%',
-    alignSelf: 'center', // Centers the mobile layout on wide screens
-    backgroundColor: '#090E0B',
-    overflow: 'hidden',
-    // Add a subtle shadow so it pops against the dark background on desktop
-    ...(Platform.OS === 'web' && {
-      shadowColor: '#000',
-      shadowOffset: { width: 0, height: 0 },
-      shadowOpacity: 0.8,
-      shadowRadius: 30,
-    }),
-  }
-});
