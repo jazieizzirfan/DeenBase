@@ -1,0 +1,67 @@
+{
+  "expo": {
+    "name": "DeenBase",
+    "slug": "deenbase",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#080D0A"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.deenbase.app",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "DeenBase needs your location to calculate accurate prayer times and Qibla direction.",
+        "NSLocationAlwaysUsageDescription": "DeenBase uses your location in the background to send Adzan notifications at the correct prayer times.",
+        "NSMotionUsageDescription": "DeenBase needs motion sensor access to show the live Qibla compass direction.",
+        "UIBackgroundModes": ["fetch", "remote-notification"],
+        "NSMicrophoneUsageDescription": "Not used."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#080D0A"
+      },
+      "package": "com.deenbase.app",
+      "versionCode": 1,
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "RECEIVE_BOOT_COMPLETED",
+        "VIBRATE",
+        "HIGH_SAMPLING_RATE_SENSORS"
+      ],
+      "googleServicesFile": "./google-services.json"
+    },
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#C4A44A",
+          "sounds": ["./assets/azan.mp3"]
+        }
+      ],
+      "expo-location",
+      "expo-sensors",
+      [
+        "expo-av",
+        {
+          "microphonePermission": false
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "your-eas-project-id"
+      }
+    }
+  }
+}
