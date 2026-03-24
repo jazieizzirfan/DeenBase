@@ -7,7 +7,9 @@
     "android": "expo run:android",
     "ios": "expo run:ios",
     "build:android": "eas build --platform android",
-    "build:ios": "eas build --platform ios"
+    "build:ios": "eas build --platform ios",
+    "deploy": "npx expo export -p web && wrangler deploy",
+    "preview": "npx expo export -p web && wrangler dev"
   },
   "dependencies": {
     "@expo-google-fonts/amiri": "^0.2.3",
@@ -47,6 +49,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.24.0",
-    "typescript": "~5.3.3"
+    "typescript": "~5.3.3",
+    "wrangler": "^4.77.0"
   }
 }
