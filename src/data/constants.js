@@ -267,6 +267,62 @@ export const QUOTES = [
   },
 
   {
+    category: 'Protection & Safety',
+    subtitle: 'Hifz',
+    items: [
+      { ref: '2:255', ar: 'اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ', en: 'Allah — there is no deity except Him, the Ever-Living, the Sustainer.', ms: 'Allah, tiada Tuhan selain Dia, Yang Maha Hidup lagi Maha Berdiri Sendiri.' },
+      { ref: '113:1-5', ar: 'قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ', en: 'Say: I seek refuge in the Lord of daybreak.', ms: 'Katakanlah: Aku berlindung kepada Tuhan yang menguasai subuh.' },
+      { ref: '114:1-6', ar: 'قُلْ أَعُوذُ بِرَبِّ النَّاسِ', en: 'Say: I seek refuge in the Lord of mankind.', ms: 'Katakanlah: Aku berlindung kepada Tuhan manusia.' },
+      { ref: '4:79', ar: 'مَا أَصَابَكَ مِنْ حَسَنَةٍ فَمِنَ اللَّهِ', en: 'Whatever good befalls you is from Allah.', ms: 'Apa sahaja kebaikan datang dari Allah.' },
+    ],
+  },
+
+  {
+    category: 'Faith & Belief',
+    subtitle: 'Iman',
+    items: [
+      { ref: '2:177', ar: 'لَيْسَ الْبِرَّ أَن تُوَلُّوا وُجُوهَكُمْ', en: 'Righteousness is not turning your faces toward east or west.', ms: 'Kebajikan bukan hanya menghadapkan wajah ke arah tertentu.' },
+      { ref: '49:13', ar: 'إِنَّ أَكْرَمَكُمْ عِندَ اللَّهِ أَتْقَاكُمْ', en: 'The most noble of you in the sight of Allah is the most righteous.', ms: 'Yang paling mulia di sisi Allah ialah yang paling bertakwa.' },
+      { ref: '22:46', ar: 'فَإِنَّهَا لَا تَعْمَى الْأَبْصَارُ', en: 'It is not eyes that are blind, but hearts.', ms: 'Bukan mata yang buta, tetapi hati.' },
+      { ref: '57:20', ar: 'اعْلَمُوا أَنَّمَا الْحَيَاةُ الدُّنْيَا', en: 'Know that the life of this world is but play and amusement.', ms: 'Ketahuilah bahawa kehidupan dunia hanyalah permainan.' },
+    ],
+  },
+
+  {
+    category: 'Hope & Optimism',
+    subtitle: 'Amal & Raja',
+    items: [
+      { ref: '93:4', ar: 'وَلَلْآخِرَةُ خَيْرٌ لَّكَ مِنَ الْأُولَىٰ', en: 'The Hereafter is better for you than the present.', ms: 'Akhirat itu lebih baik daripada dunia.' },
+      { ref: '20:114', ar: 'وَقُل رَّبِّ زِدْنِي عِلْمًا', en: 'Say: My Lord, increase me in knowledge.', ms: 'Wahai Tuhanku, tambahilah aku ilmu.' },
+      { ref: '2:45', ar: 'وَاسْتَعِينُوا بِالصَّبْرِ وَالصَّلَاةِ', en: 'Seek help through patience and prayer.', ms: 'Mohon pertolongan dengan sabar dan solat.' },
+      { ref: '12:87', ar: 'إِنَّهُ لَا يَيْأَسُ مِن رَّوْحِ اللَّهِ', en: 'Do not despair of Allah’s relief.', ms: 'Jangan berputus asa dari rahmat Allah.' },
+    ],
+  },
+
+  {
+    category: 'Justice & Truth',
+    subtitle: 'Adl & Haqq',
+    items: [
+      { ref: '4:135', ar: 'كُونُوا قَوَّامِينَ بِالْقِسْطِ', en: 'Stand firmly for justice.', ms: 'Jadilah penegak keadilan.' },
+      { ref: '5:8', ar: 'اعْدِلُوا هُوَ أَقْرَبُ لِلتَّقْوَىٰ', en: 'Be just; that is closer to righteousness.', ms: 'Berlaku adillah, itu lebih dekat kepada takwa.' },
+      { ref: '16:90', ar: 'إِنَّ اللَّهَ يَأْمُرُ بِالْعَدْلِ', en: 'Indeed, Allah commands justice.', ms: 'Sesungguhnya Allah menyuruh berlaku adil.' },
+      { ref: '17:81', ar: 'وَقُلْ جَاءَ الْحَقُّ', en: 'Say: Truth has come.', ms: 'Katakanlah: Kebenaran telah datang.' },
+    ],
+  },
+
+  {
+    category: 'Famous Islamic Sayings',
+    subtitle: 'Wisdom',
+    items: [
+      { ref: 'Hadith', ar: 'إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ', en: 'Actions are judged by intentions.', ms: 'Sesungguhnya setiap amalan bergantung kepada niat.' },
+      { ref: 'Saying', ar: 'اطلب العلم من المهد إلى اللحد', en: 'Seek knowledge from the cradle to the grave.', ms: 'Tuntutlah ilmu dari buaian hingga ke liang lahad.' },
+      { ref: 'Saying', ar: 'الدنيا مزرعة الآخرة', en: 'This world is the farm of the Hereafter.', ms: 'Dunia adalah ladang akhirat.' },
+      { ref: 'Saying', ar: 'من جدّ وجد', en: 'Whoever strives will succeed.', ms: 'Sesiapa yang berusaha, dia akan berjaya.' },
+      { ref: 'Saying', ar: 'الصبر مفتاح الفرج', en: 'Patience is the key to relief.', ms: 'Sabar adalah kunci kepada kelegaan.' },
+    ],
+  },
+
+  {
     category: 'Strength & Courage',
     subtitle: 'Quwwah',
     items: [
@@ -277,3 +333,4 @@ export const QUOTES = [
     ],
   },
 ];
+
