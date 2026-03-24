@@ -236,9 +236,9 @@ const styles = StyleSheet.create({
   hijriBar: { borderRadius: 10, paddingVertical: 8, paddingHorizontal: 13, marginBottom: 12, flexDirection: 'row', alignItems: 'center', gap: 7 },
   statsRow: { flexDirection: 'row', gap: 7, marginBottom: 12 },
   statBox: { flex: 1, borderRadius: 11, padding: 11, alignItems: 'center', borderWidth: 1 },
-  grid: { width: "100%", flexDirection: 'row', flexWrap: 'wrap', gap: 8, marginBottom: 12 },
-  qcard: { width: "48%", borderRadius: 14, padding: 14, borderWidth: 1, alignItems: 'center' },
+  grid: { width: "100%", flexDirection: 'row', flexWrap: 'wrap', gap: 7, marginBottom: 12 },
+  qcard: { width: "calc((100% - 7px) / 2)", marginBottom: 10, borderRadius: 14, padding: 14, borderWidth: 1, justifyContent: 'center', alignItems: 'center' },
   qcardTitle: { fontSize: 12.5, fontFamily: 'Sora_600SemiBold', marginBottom: 2 },
   qcardSub: { fontSize: 10, fontFamily: 'Sora_400Regular', lineHeight: 15 },
-  trust: { borderRadius: 10, padding: 10, flexDirection: 'row', alignItems: 'flex-start', justifyContent: 'center' },
+  trust: { borderRadius: 10, padding: 10, flexDirection: 'row', alignItems: 'center', justifyContent: 'center' },
 });
