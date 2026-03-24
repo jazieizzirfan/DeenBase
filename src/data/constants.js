@@ -42,14 +42,14 @@ export const COLORS = {
 export const SALAH = ['Fajr', 'Dhuhr', 'Asr', 'Maghrib', 'Isha'];
 
 export const PRAYER_ICONS = {
-  Fajr: 'sun-horizon',
-  Dhuhr: 'sun',
-  Asr: 'cloud-sun',
-  Maghrib: 'clouds-sun',
-  Isha: 'moon-stars',
-  Sunrise: 'sun-dim',
-  Sunset: 'sunset',
-  Imsak: 'fork-knife',
+  Fajr: 'ph-sun-horizon',
+  Dhuhr: 'ph-sun',
+  Asr: 'ph-cloud-sun',
+  Maghrib: 'ph-clouds-sun',
+  Isha: 'ph-moon-stars',
+  Sunrise: 'ph-sun-dim',
+  Sunset: 'ph-sunset',
+  Imsak: 'ph-fork-knife',
   Midnight: 'moon',
 };
 
